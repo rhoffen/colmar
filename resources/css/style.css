@@ -1,3 +1,122 @@
 html {
-  color: red;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+header {
+  position: fixed;
+  height: 4rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+  header .desktop {
+  display: flex;
+  justify-content: flex-start;
+  height: inherit;
+  align-items: center;
+}
+
+header img {
+  display: inline-block;
+  height: 2rem;
+}
+
+header h2 {
+  text-transform: uppercase;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+header h2 span {
+  font-weight: bold;
+}
+
+header nav span {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: gray;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 630px ) {
+
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: flex;
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+main {
+  position: relative;
+  color: white;
+  top: 4rem;
+  background-color: blue;
+}
+
+section {
+  padding: 2rem 0 2rem 1.5rem;
+}
+
+.hook {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image-container {
+  width: 60%;
+  height: auto;
+  padding-right: 1.5rem;
+}
+
+.image-container img, video {
+  width: 100%;
+}
+
+.banner {
+  background-color: gray;
+}
+
+.events {
+  background-color: white;
+  color: black;
+}
+
+.courses {
+  background-color: lightgray;
+  color: black;
+}
+
+.thesis {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  position: relative;
+  top: 4rem;
+  width: 100%;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  background-color: gray;
+  color: black;
 }
