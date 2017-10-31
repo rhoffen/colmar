@@ -17,7 +17,7 @@ header {
   z-index: 1;
 }
 
-  header .desktop {
+header .desktop {
   display: flex;
   justify-content: flex-start;
   height: inherit;
@@ -66,7 +66,7 @@ header .mobile {
     align-items: center;
   }
 }
-
+/*Main content styling*/
 main {
   position: relative;
   color: white;
@@ -91,17 +91,148 @@ section {
 
 .image-container img, video {
   width: 100%;
+  height: 100%;
 }
 
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+}
+
+.detail-container .item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1rem;
+
+}
+
+.detail-container .item .desktop {
+  /*display: inline-block;*/
+  width: 35%;
+  height: auto;
+  padding-right: 1rem;
+}
+
+.detail-container .item .mobile {
+  display: none;
+}
+
+.detail-container .item-info {
+  /*display: inline-block;*/
+  width: 65%;
+  margin: auto;
+  /*flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;*/
+}
+
+@media only screen and (max-width: 630px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hook {
+    display: block;
+  }
+
+  .image-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .detail-container {
+    align-items: center;
+  }
+}
+
+/*Banner-specific styling*/
 .banner {
-  background-color: gray;
+  background-color: lightgray;
 }
 
+.banner .detail-container {
+  justify-content: center;
+  width: 40%;
+}
+
+.motto {
+  width: 90%;
+  height: auto;
+}
+
+.motto h1,h2 {
+  color: darkgray;
+}
+
+.motto h1 {
+  font-size: 2.5rem;
+}
+
+.motto h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.button {
+  background-color: darkgray;
+  width: 90%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.button h3 a {
+  color: lightgray;
+}
+
+@media only screen and (max-width: 630px) {
+  .desktop {
+    display: none;
+  }
+
+  .banner .detail-container {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .motto {
+    width: 100%;
+  }
+
+  .motto h1 {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .motto h2 {
+    font-size: 1rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .button h3 a {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+/*Events section styling*/
 .events {
   background-color: white;
   color: black;
 }
 
+/*Courses section styling*/
 .courses {
   background-color: lightgray;
   color: black;
