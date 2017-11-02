@@ -1,3 +1,5 @@
+/*Questions on lines 13, 64 and 113.  Also, questions about copyright, portfolios.*/
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -7,6 +9,13 @@ html {
 *, *:before, *:after {
 box-sizing: inherit;
 }
+
+/*Why doesn't this work?*/
+/*@media only screen and (max-width: 630px ) {
+  .desktop {
+    display: none;
+  }*/
+
 
 header {
   position: fixed;
@@ -52,7 +61,7 @@ header nav a {
 header .mobile {
   display: none;
 }
-
+/*Why doesn't a single instance of .desktop {display: none} work? It seems I have to target the .desktop class in each section to implement it correctly. */
 @media only screen and (max-width: 630px ) {
 
   header .desktop {
@@ -101,7 +110,7 @@ section {
   align-items: flex-start;
   width: 40%;
 }
-
+/*Question: If I put width: 35%; height: auto; on the image selector in line 114, then the images are elongated.  However, if I put height: auto; on the container (line 108), then height: 100% on the image (line 114), it works.  Why? */
 .detail-container .item {
   display: flex;
   width: 100%;
@@ -337,7 +346,6 @@ section {
 
   .course-menu {
     justify-content: space-around;
-    align-items: flex-start;
   }
 
   .course-menu figure:nth-child(3n+2) {
@@ -382,6 +390,35 @@ footer {
   top: 4rem;
   width: 100%;
   padding: 1rem 1.5rem 2rem 1.5rem;
-  background-color: gray;
+  background-color: lightgray;
   color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  color: darkgray;
+}
+
+.copyright {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.legal a {
+  padding-left: 0.5rem;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 630px) {
+  footer .desktop {
+    display: none;
+  }
+
+  footer {
+    padding: 1.5rem 0 1rem 1rem;
+  }
+
+  footer .copyright {
+    padding-top: 1rem;
+  }
 }
