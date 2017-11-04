@@ -3,19 +3,13 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Hind Madurai', sans-serif;
+  color: #333333;
 }
 
 *, *:before, *:after {
 box-sizing: inherit;
 }
-
-/*Why doesn't this work?*/
-/*@media only screen and (max-width: 630px ) {
-  .desktop {
-    display: none;
-  }*/
-
 
 header {
   position: fixed;
@@ -35,17 +29,22 @@ header .desktop {
 
 header img {
   display: inline-block;
-  height: 2rem;
+  height: 3rem;
 }
 
 header h2 {
+  font-family: 'Lato', sans-serif;
+  color: #999999;
+  font-size: 1.22rem;
+  letter-spacing: .01em;
   text-transform: uppercase;
   display: inline-block;
   flex-grow: 1;
 }
 
 header h2 span {
-  font-weight: bold;
+  font-weight: 900;
+  color: black;
 }
 
 header nav span {
@@ -55,17 +54,14 @@ header nav span {
 
 header nav a {
   text-decoration: none;
-  color: gray;
 }
 
 header .mobile {
   display: none;
 }
-/*Why doesn't a single instance of .desktop {display: none} work? It seems I have to target the .desktop class in each section to implement it correctly. */
-@media only screen and (max-width: 630px ) {
-
+@media only screen and (max-width: 630px)  {
   header .desktop {
-    display: none;
+  display: none;
   }
 
   header .mobile {
@@ -78,13 +74,11 @@ header .mobile {
 /*Main content styling*/
 main {
   position: relative;
-  color: white;
   top: 4rem;
-  background-color: blue;
 }
 
 section {
-  padding: 2rem 0 2rem 1.5rem;
+  padding: 0 0 0 1.5rem;
 }
 
 .hook {
@@ -96,6 +90,8 @@ section {
   width: 60%;
   height: auto;
   padding-right: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .image-container img, video {
@@ -109,13 +105,19 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   width: 40%;
+  padding-top: 2rem;
 }
 /*Question: If I put width: 35%; height: auto; on the image selector in line 114, then the images are elongated.  However, if I put height: auto; on the container (line 108), then height: 100% on the image (line 114), it works.  Why? */
 .detail-container .item {
   display: flex;
+  flex-direction: row;
   width: 100%;
   height: auto;
-  padding-bottom: 1rem;
+  padding: 1rem;
+}
+
+.detail-container .item:first-child {
+  padding-top: 0;
 }
 
 .detail-container .item img.desktop {
@@ -130,8 +132,9 @@ section {
 
 .detail-container .item-info {
   width: 65%;
-  margin: auto;
+  margin: auto 0;
   line-height: 1.2;
+  float: left;
 }
 
 .detail-container .item-info h2 {
@@ -148,6 +151,30 @@ section {
   font-size: 1rem;
   color: blue;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #383838;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #383838;
+}
+
+h3 {
+  color: #595959;
+}
+
+.image-container h1 {
+  font-size: 2rem;
+  letter-spacing: .01rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
 
 @media only screen and (max-width: 630px) {
   section {
@@ -182,7 +209,7 @@ section {
 
 /*Banner-specific styling*/
 .banner {
-  background-color: lightgray;
+  background-color: #d1d1cc;
 }
 
 .banner .detail-container {
@@ -195,28 +222,19 @@ section {
   height: auto;
 }
 
-.motto h1,h2 {
-  color: darkgray;
-}
-
-.motto h1 {
-  font-size: 2.5rem;
-}
-
 .motto h2 {
-  font-size: 1.5rem;
   margin: 1.5rem 0;
 }
 
 .button {
-  background-color: darkgray;
+  background-color: #333333;
   width: 90%;
   padding: 0.5rem 0;
   text-align: center;
 }
 
 .button h3 a {
-  color: lightgray;
+  color: white;
 }
 
 @media only screen and (max-width: 630px) {
@@ -234,7 +252,6 @@ section {
   }
 
   .motto h1 {
-    font-size: 1.5rem;
     padding-bottom: 2rem;
   }
 
@@ -257,17 +274,37 @@ section {
 
 /*Events section styling*/
 .events {
-  background-color: white;
-  color: black;
+  background-color: #ebebeb;
+}
+
+.events .image-container {
+  border-right: 1px solid #e5e5e5;
+}
+
+.attribution {
+  padding-top: 2rem;
+  font-size: .75rem;
+  letter-spacing: normal;
+}
+.events .item {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 #guest-lecture {
   padding-bottom: 0;
 }
 
+.events .item:last-child {
+  background-color: #d1d1cc;
+}
+
+.events .item:first-child {
+  border-top: 0;
+}
+
 @media only screen and (max-width: 630px) {
 
-  .events
   .events .detail-container {
     margin: 0;
     align-items: center;
@@ -289,12 +326,12 @@ section {
 
 /*Courses section styling*/
 .courses {
-  background-color: lightgray;
+  background-color: #e5e5e5;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4.5rem 2rem;
+  padding: 2rem 4.5rem;
 }
 
 .course-menu.mobile {
@@ -303,6 +340,10 @@ section {
 
 .courses h1 {
   padding-bottom: 2rem;
+}
+
+.courses figcaption h1 {
+  font-size: 1.25rem;
 }
 
 .course-menu {
@@ -379,10 +420,27 @@ section {
     text-decoration: none;
   }
 }
+
  /*Thesis section styling*/
 .thesis {
   background-color: white;
-  color: black;
+  flex-direction: column;
+}
+
+.thesis .image-container {
+  background-color: #e5e5e5;
+  padding-top: 0;
+  margin-top: 2rem;
+}
+
+.title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.thesis .hook .detail-container .item:first-child {
+  padding-top: 1rem;
+  background-color: #d1d1cc;
 }
 
 footer {
@@ -390,13 +448,12 @@ footer {
   top: 4rem;
   width: 100%;
   padding: 1rem 1.5rem 2rem 1.5rem;
-  background-color: lightgray;
-  color: black;
+  border-top: lightgray 0.5px solid;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 1.5rem 2rem 1.5rem;
-  color: darkgray;
+  font-size: 0.8rem;
 }
 
 .copyright {
