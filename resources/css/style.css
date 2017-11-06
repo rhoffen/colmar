@@ -520,12 +520,10 @@ a {
   .course-menu figure:nth-child(3n+2) {
     margin: 0;
   }
-
 }
 
-media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px) {
   .courses {
-    /*width: 100%;*/
     padding-left: 1rem;
     padding-right: 1rem;
   }
