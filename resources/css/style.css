@@ -263,7 +263,7 @@ a {
   color: white;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 775px) {
 
   .banner .detail-container {
     justify-content: flex-start;
@@ -345,7 +345,7 @@ a {
   border-top: 0;
 }
 
-@media only screen and (max-width: 770px) and (min-width: 630px) {
+@media only screen and (max-width: 775px) and (min-width: 630px) {
 
   .events {
     flex-direction: column;
@@ -511,7 +511,7 @@ a {
   padding: 0.5rem 0;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 775px) {
 
   .course-menu {
     justify-content: space-around;
@@ -523,7 +523,7 @@ a {
 
 }
 
-@media only screen and (max-width: 630px) {
+media only screen and (max-width: 630px) {
   .courses {
     /*width: 100%;*/
     padding-left: 1rem;
