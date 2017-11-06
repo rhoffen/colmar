@@ -118,7 +118,7 @@ section {
   width: 40%;
   padding-top: 2rem;
 }
-/*Question: If I put width: 35%; height: auto; on the image selector in line 114, then the images are elongated.  However, if I put height: auto; on the container (line 108), then height: 100% on the image (line 114), it works.  Why? */
+
 .detail-container .item {
   display: flex;
   flex-direction: row;
@@ -145,7 +145,6 @@ section {
   width: 65%;
   margin: auto 0;
   line-height: 1.2;
-  float: left;
 }
 
 .detail-container .item-info h2 {
@@ -264,6 +263,15 @@ a {
   color: white;
 }
 
+@media only screen and (max-width: 770px) {
+
+  .banner .detail-container {
+    justify-content: flex-start;
+    padding-top: 4rem;
+    width: 40%;
+  }
+}
+
 @media only screen and (max-width: 630px) {
   .desktop {
     display: none;
@@ -316,7 +324,6 @@ a {
   letter-spacing: normal;
 }
 
-
 .events .item {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -336,6 +343,49 @@ a {
 
 .events .item:first-child {
   border-top: 0;
+}
+
+@media only screen and (max-width: 770px) and (min-width: 630px) {
+
+  .events {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .events .detail-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .events .detail-container .event.item {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .detail-container .item:first-child {
+    padding-top: 1rem;
+  }
+
+  .item .desktop {
+    display: none;
+  }
+
+  .events .detail-container .event.item .item-info {
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .detail-container .item-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .detail-container .event img.mobile,#guest-lecture .mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -398,7 +448,6 @@ a {
     display: block;
   }
 
-
   .events .item:last-child {
     background-color: inherit;
   }
@@ -407,7 +456,6 @@ a {
 /*Courses section styling*/
 .courses {
   background-color: #e5e5e5;
-  /*color: black;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -463,7 +511,7 @@ a {
   padding: 0.5rem 0;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 770px) {
 
   .course-menu {
     justify-content: space-around;
