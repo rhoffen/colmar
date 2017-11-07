@@ -53,6 +53,12 @@ header h2 span {
 header nav span {
   display: inline-block;
   padding-left: 1rem;
+  transition: all 200ms;
+}
+
+header nav span:hover {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 630px)  {
@@ -74,6 +80,11 @@ header nav span {
   header .mobile img {
     width: 2rem;
     height: auto;
+    transition: background-color 50ms;
+  }
+
+  header .mobile a:hover {
+    background-color: #d1d1cc;
   }
 }
 
@@ -378,7 +389,7 @@ a {
     padding-top: 1rem;
   }
 
-  .item .desktop {
+  .events .item .desktop {
     display: none;
   }
 
@@ -563,7 +574,7 @@ a {
     transition: all 200ms ease-in-out;
   }
 
-  a:hover {
+  .mobile a:hover {
     font-size: 1.5rem;
   }
 }
