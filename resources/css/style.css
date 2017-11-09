@@ -9,7 +9,7 @@ html {
 *, *:before, *:after {
 box-sizing: inherit;
 }
-
+/*Header styling with logo and text nav*/
 header {
   position: fixed;
   height: 4rem;
@@ -60,7 +60,7 @@ header nav span:hover {
   font-size: 1.3rem;
   font-weight: bold;
 }
-
+/*Header nav with only image logo and Font Awesome links*/
 @media only screen and (max-width: 630px)  {
   header .desktop {
     display: none;
@@ -91,18 +91,18 @@ header nav span:hover {
 /*Main content styling*/
 main {
   position: relative;
-  top: 4rem;
+  top: 4rem; /*To offset sticky header*/
 }
 
 section {
   padding: 0 0 0 1.5rem;
 }
-
+/*For sections with a large image or video featured on the left as a "hook" and text or other info on the right*/
 .hook {
   display: flex;
   justify-content: flex-start;
 }
-
+/*Styling for large images/videos and explanatory text underneath*/
 .image-container {
   width: 60%;
   height: auto;
@@ -115,7 +115,7 @@ section {
   width: 100%;
   height: auto;
 }
-
+/*Styling for container for details or other items to the right of the large image*/
 .detail-container {
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@ section {
   width: 40%;
   padding-top: 2rem;
 }
-
+/*Styling for individual items in detail container*/
 .detail-container .item {
   display: flex;
   flex-direction: row;
@@ -194,7 +194,7 @@ a {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
 }
-
+/*Styling of hook sections with large images and detail containers for mobile*/
 @media only screen and (max-width: 630px) {
   section {
     display: flex;
@@ -245,7 +245,6 @@ a {
 
 .banner .detail-container {
   justify-content: center;
-  /*width: 40%;*/
 }
 
 .motto {
@@ -257,6 +256,7 @@ a {
   margin: 1.5rem 0;
 }
 
+/*Start Here button styling*/
 .button {
   background-color: #333333;
   width: 90%;
@@ -283,8 +283,7 @@ a {
   transition: all 200ms ease-in-out;
 }
 
-
-
+/*Banner section tablet styling*/
 @media only screen and (max-width: 800px) {
 
   .banner .detail-container {
@@ -292,7 +291,7 @@ a {
     padding-top: 2rem;
   }
 }
-
+/*Banner section mobile styling*/
 @media only screen and (max-width: 630px) {
   .desktop {
     display: none;
@@ -366,8 +365,9 @@ a {
   border-top: 0;
 }
 
+/*Events section tablet styling*/
 @media only screen and (max-width: 800px) and (min-width: 630px) {
-
+  /*Events appear in a row underneath hook rather than in a column to the right*/
   .events {
     flex-direction: column;
     align-items: center;
@@ -408,7 +408,7 @@ a {
     height: auto;
   }
 }
-
+/*Event section mobile styling - Hook disappears and event/information boxes appear in a centered column*/
 @media only screen and (max-width: 630px) {
   .event .item {
     margin: 0;
@@ -532,6 +532,7 @@ a {
   padding: 0.5rem 0;
 }
 
+/*Course areas of study for tablet - hard margins on middle items removed*/
 @media only screen and (max-width: 800px) {
 
   .course-menu {
@@ -543,6 +544,7 @@ a {
   }
 }
 
+/*Course areas of study for mobile - List of links rather than images and course titles*/
 @media only screen and (max-width: 630px) {
   .courses {
     padding-left: 1rem;
@@ -604,6 +606,7 @@ a {
   background-color: #d1d1cc;
 }
 
+/*Thesis styling for mobile - only video thesis presentation with no explanatory text nor additional featured theses*/
 @media only screen and (max-width: 630px) {
   .thesis .desktop {
     display: none;
@@ -613,10 +616,10 @@ a {
     display: block;
   }
 }
-
+/*Footer with copyright info and Terms/Privacy links*/
 footer {
   position: relative;
-  top: 4rem;
+  top: 4rem; /*To offset sticky header*/
   width: 100%;
   padding: 1rem 1.5rem 2rem 1.5rem;
   border-top: lightgray 0.5px solid;
@@ -636,6 +639,7 @@ footer {
   padding-left: 0.5rem;
 }
 
+/*Footer styling for mobile - Copyright info only*/
 @media only screen and (max-width: 630px) {
   footer .desktop {
     display: none;

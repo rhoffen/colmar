@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <!-- Text nav -->
+      <!-- Text nav for desktop view-->
       <div class="desktop">
         <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
         <h2><span>colmar</span>academy</h2>
@@ -24,7 +24,7 @@
           <span><a href="#">Sign in</a></span>
         </nav>
       </div>
-      <!-- Icon nav -->
+      <!-- Icon nav for tablet and mobile view -->
       <div class="mobile">
         <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
         <a href="#"><img src="./resources/images/ic-on-campus.svg" alt="On campus"></a>
@@ -32,30 +32,39 @@
         <a href="#"><img src="./resources/images/ic-login.svg" alt="Sign in"></a>
       </div>
     </header>
+    <!--Main content div  -->
     <main>
+      <!--Top banner section with motto and action button  -->
       <section class="banner hook" role="presentation">
+        <!-- Large image -->
         <div class="image-container" role="presentation">
           <img src="./resources/images/banner.jpg" alt="Students reading at a picnic table">
         </div>
         <div class="detail-container" role="presentation">
+          <!-- Text details and action button -->
           <div class="motto">
             <h1>Learn something new every day</h1>
             <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>
           </div>
+          <!-- Action button -->
           <div class="button" role="presentation">
             <a href="#"><h3>Start here</h3></a>
           </div>
         </div>
+      <!-- Upcoming events and other information -->
       </section>
       <section class="events hook" role="presentation">
+        <!-- Large image with testimonial and attribution -->
         <div class="image-container desktop">
           <img src="./resources/images/information-main.jpg" alt="Smiling man reading outdoors">
           <h1>It doesn't hurt to keep practicing</h1>
           <p aria-label="quote">"Curabitur vitae libero in ipsum porttitor consequat.  Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           <p class="attribution" aria-label="Quote attribution">Emmanuel, Sr. Strategist at Hiring.com</p>
         </div>
+        <!-- Events and information with images and links to further information -->
         <div class="detail-container" role="presentation" aria-label="Upcoming events">
           <div class="event item" role="presentation" aria-label="Event">
+              <!-- Orientation information -->
               <img class="desktop" src="./resources/images/information-orientation.jpg" alt="Walking along a path with scattered fall leaves and long shadows">
               <img class="mobile" src="./resources/images/information-orientation-mobile.jpg" alt="Walking along a path with scattered fall leaves and long shadows">
             <div class="item-info" role="presentation">
@@ -64,6 +73,7 @@
               <a href="#">Read more</a>
             </div>
           </div>
+          <!-- Location information -->
           <div class="event item" role="presentation" aria-label="Event">
             <img class="desktop" src="./resources/images/information-campus.jpg" alt="Students working at a long table in a wood-paneled room with pendant lights and a framed map of South America on the wall">
             <img class="mobile" src="./resources/images/information-campus-mobile.jpg" alt="Students working at a long table in a wood-paneled room with pendant lights and a framed map of South America on the wall">
@@ -73,6 +83,7 @@
             <a href="#">Read more</a>
             </div>
           </div>
+          <!-- Guest lecture information -->
           <div class="event item" role="presentation" aria-label="Event">
             <img class="desktop" src="./resources/images/information-guest-lecture.jpg" alt="Oliver Sack with a black beret, tortoiseshell glasses and a full gray mustache and beard">
             <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg" alt="Oliver Sack with a black beret, tortoiseshell glasses and a full gray mustache and beard">
@@ -85,6 +96,7 @@
           </div>
         </div>
       </section>
+      <!-- Boxes for areas of study and specific course titles -->
       <section class="courses">
         <h1>Start learning</h1>
         <div class="desktop course-menu" role="presentation">
@@ -137,6 +149,7 @@
             </figcaption>
           </figure>
         </div>
+        <!-- Mobile section with areas of study in a list without images -->
         <div class="mobile course-menu">
           <ul  role="presentation">
             <li><a href="#">Software engineering</a></li>
@@ -148,9 +161,11 @@
           </ul>
         </div>
       </section>
+      <!-- Thesis section for featured work -->
       <section class="thesis">
         <h1 class="title desktop">Thesis exhibit</h1>
         <h1 class="title mobile">Thesis exhibits</h1>
+        <!-- Main thesis featured - video with autoplay upon browser refresh -->
         <div class="hook" role="presentation">
           <div class="image-container" role="presentation">
             <video src="./resources/videos/thesis.mp4" autoplay="" aria-label="A tall building with many windows stands as clouds pass quickly overhead and light and shadow change continuously from sunrise to nighttime.">
@@ -159,6 +174,7 @@
             <h1 class="desktop">Reimagine urban</h1>
             <p class="desktop">"Curabitur vitae libero in ipsum porttitor consequat.  Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           </div>
+          <!-- Other featured theses not visible in mobile format -->
           <div class="detail-container desktop" role="presentation">
             <div class="thesis item" aria-label="Thesis">
               <img src="./resources/images/thesis-fisma.jpg" alt="Close-up of an arm and hand sketching with a cell phone resting on the papers" class="desktop">
@@ -179,9 +195,11 @@
       </section>
     </main>
     <footer>
+      <!-- Copyright -->
       <div class="copyright">
         &copy 2016 Colmar Academy.  All rights reserved.
       </div>
+      <!-- Links for terms and privacy information -->
       <div class="legal desktop" role="presesntation">
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
